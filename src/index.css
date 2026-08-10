@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "EB Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-navy: #263566;
+  --color-navy-light: #3a4a85;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #17171a;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
