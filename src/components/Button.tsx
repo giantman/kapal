@@ -6,7 +6,7 @@ type Props = {
   href?: string;
   onClick?: () => void;
   type?: "button" | "submit";
-  variant?: "solid" | "outline";
+  variant?: "solid" | "outline" | "ghost";
   className?: string;
   children: ReactNode;
 };
@@ -21,11 +21,13 @@ export default function Button({
   children,
 }: Props) {
   const base =
-    "inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm tracking-wide transition-colors";
+    "inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-medium tracking-wide transition-colors";
   const styles =
     variant === "solid"
-      ? "bg-navy text-white hover:bg-navy-light"
-      : "border border-navy text-navy hover:bg-navy hover:text-white";
+      ? "bg-ink text-white hover:bg-ink-light"
+      : variant === "ghost"
+        ? "border border-white/40 bg-transparent text-white hover:bg-white hover:text-ink hover:border-white"
+        : "border border-ink/15 bg-white text-ink hover:bg-ink hover:text-white hover:border-ink";
   const cls = `${base} ${styles} ${className}`;
 
   if (to) {

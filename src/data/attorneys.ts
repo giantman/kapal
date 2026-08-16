@@ -69,6 +69,32 @@ export const attorneys: Attorney[] = [
     ],
   },
   {
+    slug: "michael-trope",
+    name: "Michael L. Trope, Esq.",
+    title: "Partner",
+    group: "Partners",
+    summary: "Partner at Kaplan Trope Gekht & DeCarolis.",
+    sections: [
+      {
+        heading: "Full biography coming soon",
+        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+      },
+    ],
+  },
+  {
+    slug: "patrick-decarolis",
+    name: "Patrick DeCarolis, Esq.",
+    title: "Partner",
+    group: "Partners",
+    summary: "Partner at Kaplan Trope Gekht & DeCarolis.",
+    sections: [
+      {
+        heading: "Full biography coming soon",
+        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+      },
+    ],
+  },
+  {
     slug: "meline-kyurkchyan",
     name: "Meline Kyurkchyan, Esq.",
     title: "Associate Attorney",

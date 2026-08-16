@@ -2,18 +2,16 @@ import { firmInfo } from "../data/services";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-black/5 bg-neutral-50">
+    <footer className="border-t border-navy/10 bg-cream-dark/40">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 sm:flex-row sm:items-start sm:justify-between lg:px-10">
         <div>
-          <p className="font-serif text-3xl text-neutral-900">
-            Kaplan Trope &amp; Gekht
-          </p>
-          <p className="mt-2 text-neutral-500">
+          <p className="font-serif text-3xl text-navy">{firmInfo.legalName}</p>
+          <p className="mt-2 text-navy/60">
             A Partnership Including Professional Corporations
           </p>
         </div>
 
-        <div className="space-y-4 text-neutral-700 sm:text-right">
+        <div className="space-y-4 text-navy/80 sm:text-right">
           <div>
             <p>{firmInfo.address}</p>
             <a
@@ -34,9 +32,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-black/5 px-6 py-6 text-xs text-neutral-500 lg:px-10">
+      <div className="border-t border-navy/10 px-6 py-6 text-xs text-navy/60 lg:px-10">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Kaplan Trope &amp; Gekht. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {firmInfo.name}. All rights reserved.
+          </p>
           <p>Attorney Advertising. Prior results do not guarantee a similar outcome.</p>
         </div>
       </div>
