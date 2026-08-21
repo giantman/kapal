@@ -11,6 +11,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -19,8 +20,19 @@ export default function Navbar() {
     setMobileServicesOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-transparent">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors ${
+        scrolled ? "border-b border-navy/10 bg-cream/95 backdrop-blur" : "bg-transparent"
+      }`}
+    >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-6 lg:px-10">
         <Link to="/" className="flex min-w-0 items-center gap-3">
           <Logo className="h-9 w-9 shrink-0" />
