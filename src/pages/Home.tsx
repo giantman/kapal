@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Carousel from "../components/Carousel";
@@ -5,6 +6,10 @@ import ServiceCard from "../components/ServiceCard";
 import AttorneyCard from "../components/AttorneyCard";
 import { services } from "../data/services";
 import { attorneys } from "../data/attorneys";
+import marbleRipple from "../assets/marble_ripple.gif";
+import glitchStripes from "../assets/glitch_stripes.gif";
+
+const heroImages = [marbleRipple, glitchStripes];
 
 export default function Home() {
   const featuredServices = services.slice(0, 6);
@@ -12,16 +17,33 @@ export default function Home() {
   const col1 = services.slice(0, half);
   const col2 = services.slice(half);
 
+  const [heroIndex, setHeroIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setHeroIndex((i) => (i + 1) % heroImages.length);
+    }, 3000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <>
-      <section
-        className="relative -mt-16 flex min-h-screen flex-col items-center justify-center bg-cover bg-center px-6 text-center"
-        style={{ backgroundImage: "url(/hero@2x.png)" }}
-      >
-        <h1 className="mx-auto max-w-3xl font-serif text-5xl leading-tight text-navy sm:text-6xl">
+      <section className="relative -mt-16 flex min-h-screen flex-col items-center justify-center px-6 text-center">
+        {heroImages.map((src, i) => (
+          <div
+            key={src}
+            aria-hidden={i !== heroIndex}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
+              i === heroIndex ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ backgroundImage: `url(${src})` }}
+          />
+        ))}
+        <div className="absolute inset-0 bg-ink/50" />
+        <h1 className="relative mx-auto max-w-3xl font-serif text-5xl leading-tight text-navy sm:text-6xl">
           Southern California's high-asset family law attorneys
         </h1>
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+        <div className="relative mt-9 flex flex-wrap items-center justify-center gap-4">
           <Button to="/contact" variant="ghost">
             Leave a message
           </Button>

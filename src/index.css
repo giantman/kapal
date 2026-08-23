@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Copperplate";
-  src: url("/Copperplate.otf") format("opentype");
+  src: url("./assets/Copperplate.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
