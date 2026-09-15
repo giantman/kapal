@@ -133,32 +133,6 @@ export default function Contact() {
           </div>
         </form>
       )}
-
-      <div className="mx-auto mt-24 flex max-w-xl flex-col gap-8 border-t border-navy/20 pt-12 text-center sm:flex-row sm:justify-between sm:text-left">
-        <div>
-          <p className="text-xs font-medium tracking-widest text-navy/50 uppercase">
-            Address
-          </p>
-          <p className="mt-2 text-navy/80">{firmInfo.address}</p>
-          <a
-            href={firmInfo.mapUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-1 inline-block text-sm text-navy underline underline-offset-4"
-          >
-            Get directions
-          </a>
-        </div>
-        <div>
-          <p className="text-xs font-medium tracking-widest text-navy/50 uppercase">
-            Phone &amp; Fax
-          </p>
-          <a href={`tel:${firmInfo.phone}`} className="mt-2 block text-navy/80 hover:text-navy">
-            Call us: {firmInfo.phone}
-          </a>
-          <p className="text-navy/80">Fax us: {firmInfo.fax}</p>
-        </div>
-      </div>
     </section>
   );
 }
