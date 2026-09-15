@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 import Logo from "./Logo";
 import Button from "./Button";
 import { firmInfo, services } from "../data/services";
@@ -117,15 +118,19 @@ export default function Navbar() {
               Services
             </NavItem>
             {servicesOpen && (
-              <div className="absolute left-1/2 top-full w-[520px] -translate-x-1/2 pt-4">
+              <div className="absolute left-1/2 top-full w-[640px] -translate-x-1/2 pt-4">
                 <div className="grid grid-cols-2 gap-x-8 gap-y-1 rounded-lg border border-ink/10 bg-white p-6 shadow-xl">
                   {services.map((s) => (
                     <Link
                       key={s.slug}
                       to={`/service/${s.slug}`}
-                      className="rounded px-2 py-1.5 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink"
+                      className="group flex items-center justify-between gap-2 rounded px-2 py-1.5 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink"
                     >
                       {s.title}
+                      <ChevronRight
+                        className="shrink-0 text-ink/40 transition-transform group-hover:translate-x-1"
+                        size={16}
+                      />
                     </Link>
                   ))}
                 </div>

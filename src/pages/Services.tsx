@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 import Button from "../components/Button";
 import Seo from "../components/Seo";
 import { services } from "../data/services";
@@ -36,10 +37,13 @@ export default function Services() {
               <Link
                 key={s.slug}
                 to={`/service/${s.slug}`}
-                className="flex gap-2 font-serif text-xl text-navy hover:underline"
+                className="group flex items-center justify-between gap-2 font-serif text-xl text-navy hover:underline"
               >
-                <span className="text-navy/40">•</span>
                 {s.title}
+                <ChevronRight
+                  className="shrink-0 text-navy/40 transition-transform group-hover:translate-x-1"
+                  size={18}
+                />
               </Link>
             ))}
           </div>
