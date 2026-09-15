@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import type { Attorney } from "../data/attorneys";
-import Button from "./Button";
 
 const initials = (name: string) =>
   name
@@ -18,24 +17,40 @@ export default function AttorneyCard({
   className?: string;
 }) {
   return (
-    <div className={`group relative overflow-hidden ${className}`} style={{ aspectRatio: "4 / 5" }}>
-      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-ink/25 via-cream-dark to-ink/40">
-        <span className="font-serif text-6xl text-navy/30">
-          {initials(attorney.name)}
-        </span>
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-transparent" />
+    <div className={`group flex flex-col ${className}`}>
+      <Link
+        to={`/${attorney.slug}`}
+        className="relative block overflow-hidden rounded-[6px]"
+        style={{ aspectRatio: "4 / 5" }}
+      >
+        {attorney.photo ? (
+          <img
+            src={attorney.photo}
+            alt={attorney.name}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-ink/25 via-cream-dark to-ink/40">
+            <span className="font-serif text-6xl text-navy/30">
+              {initials(attorney.name)}
+            </span>
+          </div>
+        )}
+      </Link>
 
-      <div className="absolute inset-x-0 bottom-0 p-5">
+      <div className="pt-4">
         <Link to={`/${attorney.slug}`}>
-          <p className="font-serif text-xl text-white group-hover:underline">
+          <p className="font-serif text-xl text-navy group-hover:underline">
             {attorney.name}
           </p>
         </Link>
-        <p className="mt-0.5 text-sm text-white/75">{attorney.title}</p>
-        <Button to={`/${attorney.slug}`} className="mt-4 px-6! py-2! text-xs!">
-          Read Bio
-        </Button>
+        <p className="mt-0.5 text-sm text-navy/60">{attorney.title}</p>
+        <Link
+          to={`/${attorney.slug}`}
+          className="mt-4 inline-block text-sm text-navy underline underline-offset-4 hover:text-navy/70"
+        >
+          Read bio.
+        </Link>
       </div>
     </div>
   );

@@ -1,9 +1,18 @@
+import markVincentKaplan from "../assets/attorneys/mark-vincent-kaplan.jpeg";
+import garryGekht from "../assets/attorneys/garry-gekht.jpeg";
+import melineKyurkchyan from "../assets/attorneys/meline-kyurkchyan.jpeg";
+import michelleTaran from "../assets/attorneys/michelle-taran.jpeg";
+import droritRaitor from "../assets/attorneys/drorit-raitor.jpg";
+import deborahTilton from "../assets/attorneys/deborah-tilton.jpg";
+import saraTavakoli from "../assets/attorneys/sara-tavakoli.png";
+
 export type Attorney = {
   slug: string;
   name: string;
   title: string;
   group: "Partners" | "Associates";
   summary: string;
+  photo?: string;
   sections: { heading: string; body: string }[];
 };
 
@@ -13,6 +22,7 @@ export const attorneys: Attorney[] = [
     name: "Mark Vincent Kaplan, Esq.",
     title: "Founding Partner",
     group: "Partners",
+    photo: markVincentKaplan,
     summary:
       "44 years practicing family law in California, with an AV Preeminent rating from Martindale-Hubbell and repeated recognition as a Southern California Super Lawyer.",
     sections: [
@@ -39,6 +49,7 @@ export const attorneys: Attorney[] = [
     name: "Garry M. Gekht, Esq.",
     title: "Partner",
     group: "Partners",
+    photo: garryGekht,
     summary:
       "A former forensic accountant and Certified Divorce Financial Analyst who has practiced family law since 1998, handling hundreds of cases involving complex financial analysis and asset valuation.",
     sections: [
@@ -95,10 +106,46 @@ export const attorneys: Attorney[] = [
     ],
   },
   {
+    slug: "drorit-raitor",
+    name: "Drorit Bick Raiter, Esq.",
+    title: "Partner",
+    group: "Partners",
+    photo: droritRaitor,
+    summary:
+      "Nearly two decades of complex family law litigation experience and a pragmatic, client-focused approach to her practice.",
+    sections: [
+      {
+        heading: "Education",
+        body: "Bachelor of Arts in English from the University of California, Berkeley, prior to matriculating from Loyola Law School, Los Angeles in 2007.",
+      },
+      {
+        heading: "Professional Experience",
+        body: "Has participated in litigation of hundreds of family law cases, including a successful defense of an appeal of a family law decision in Division Two of the Second Appellate District of the Court of Appeal of the State of California.",
+      },
+      {
+        heading: "Recognition",
+        body: "Included in Thomson Reuters' Super Lawyers Rising Stars list for 2017 - 2020.",
+      },
+      {
+        heading: "Community Service",
+        body: "Pro bono work at the Domestic Violence Clinic of the Los Angeles Superior Court, and a recent commitment to the Harriett Buhai Center for Family Law.",
+      },
+      {
+        heading: "Professional Memberships",
+        body: "Beverly Hills Bar Association; Israeli American Legal Network.",
+      },
+      {
+        heading: "Additional Details",
+        body: "Raised in Los Angeles, where she resides with her husband and their three sons. Speaks Hebrew.",
+      },
+    ],
+  },
+  {
     slug: "meline-kyurkchyan",
     name: "Meline Kyurkchyan, Esq.",
     title: "Associate Attorney",
     group: "Associates",
+    photo: melineKyurkchyan,
     summary:
       "Focused exclusively on family law practice since being admitted to the California Bar in 2015.",
     sections: [
@@ -121,6 +168,7 @@ export const attorneys: Attorney[] = [
     name: "Michelle Taran, Esq.",
     title: "Associate Attorney",
     group: "Associates",
+    photo: michelleTaran,
     summary:
       "Brings three years of complex civil litigation experience to her family law practice.",
     sections: [
@@ -139,44 +187,11 @@ export const attorneys: Attorney[] = [
     ],
   },
   {
-    slug: "drorit-raitor",
-    name: "Drorit Bick Raiter, Esq.",
-    title: "Associate Attorney",
-    group: "Associates",
-    summary:
-      "Over 11 years of litigation practice covering family law, probate, estate, and appellate matters.",
-    sections: [
-      {
-        heading: "Education",
-        body: "Bachelor of Arts in English from the University of California, Berkeley. Juris Doctor from Loyola Law School, Los Angeles.",
-      },
-      {
-        heading: "Professional Experience",
-        body: "Over 11 years of litigation practice covering family law, probate, estate, and appellate matters. Successfully defended an appeal in Division Two of the Second Appellate District of the California Court of Appeal.",
-      },
-      {
-        heading: "Recognition",
-        body: "Included in Thomson Reuters' Super Lawyers Rising Stars list for 2017, 2018, 2019, and 2020.",
-      },
-      {
-        heading: "Community Service",
-        body: "Volunteer attorney with Bet Tzedek Legal Services, serving low-income clients, and pro bono work at Domestic Violence Clinics in the Los Angeles Superior Court's Northwest and West Districts.",
-      },
-      {
-        heading: "Professional Memberships",
-        body: "Beverly Hills Bar Association; Israeli Legal Network.",
-      },
-      {
-        heading: "Additional Details",
-        body: "Los Angeles native; fluent in Hebrew, written and spoken; married with three sons; active in local charitable organizations.",
-      },
-    ],
-  },
-  {
     slug: "deborah-tilton",
     name: "Deborah Tilton, Esq.",
     title: "Associate Attorney",
     group: "Associates",
+    photo: deborahTilton,
     summary:
       "Specializes in family and matrimonial law settlements and litigation, particularly serving affluent clients in the entertainment and business sectors.",
     sections: [
@@ -207,6 +222,20 @@ export const attorneys: Attorney[] = [
       {
         heading: "Other Affiliations",
         body: "LACMA, MoCA; supporter of KCRW, KPCC, and KCET.",
+      },
+    ],
+  },
+  {
+    slug: "sara-tavakoli",
+    name: "Sara Tavakoli, Esq.",
+    title: "Associate Attorney",
+    group: "Associates",
+    photo: saraTavakoli,
+    summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
+    sections: [
+      {
+        heading: "Full biography coming soon",
+        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
       },
     ],
   },

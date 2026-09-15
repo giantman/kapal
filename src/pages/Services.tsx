@@ -4,8 +4,12 @@ import { services } from "../data/services";
 
 export default function Services() {
   return (
-    <>
-      <section className="px-6 pt-20 pb-16 text-center lg:pt-24">
+    <section
+      data-navbar-theme="light"
+      className="w-full bg-white"
+      style={{ "--color-navy": "var(--color-ink)" } as React.CSSProperties}
+    >
+      <div className="px-6 pt-20 pb-16 text-center lg:pt-24">
         <p className="text-xs font-medium tracking-widest text-navy/50 uppercase">
           Services
         </p>
@@ -17,9 +21,9 @@ export default function Services() {
           valuations, our attorneys handle every facet of family law with
           care and precision.
         </p>
-      </section>
+      </div>
 
-      <section className="border-y border-navy/10 bg-cream-dark/40">
+      <div className="border-b border-navy/20">
         <div className="mx-auto max-w-4xl px-6 py-20 lg:py-24">
           <div className="grid grid-cols-1 gap-x-16 gap-y-3 sm:grid-cols-2">
             {services.map((s) => (
@@ -34,9 +38,9 @@ export default function Services() {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      <section>
+      <div>
         <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-28">
           <h2 className="font-serif text-3xl text-navy sm:text-4xl">
             Not sure where to start?
@@ -49,7 +53,7 @@ export default function Services() {
             Request a consultation
           </Button>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

@@ -1,17 +1,10 @@
+@import "@fontsource/cooper-hewitt/latin-400.css";
+@import "@fontsource/cooper-hewitt/latin-500.css";
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Copperplate";
-  src: url("./assets/Copperplate.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 @theme {
-  --font-serif: "Instrument Serif", Georgia, serif;
-  --font-sans: "Instrument Sans", system-ui, sans-serif;
-  --font-copperplate: "Copperplate", Georgia, serif;
+  --font-serif: "Cooper Hewitt", Georgia, serif;
+  --font-sans: "Cooper Hewitt", Helvetica, Arial, system-ui, sans-serif;
   --color-navy: #ffffff;
   --color-ink: #0c1d55;
   --color-ink-light: #1f3372;

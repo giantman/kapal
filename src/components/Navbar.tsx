@@ -12,6 +12,7 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [light, setLight] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -27,15 +28,43 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const targets = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-navbar-theme="light"]'),
+    );
+    if (targets.length === 0) {
+      setLight(false);
+      return;
+    }
+    const intersecting = new Set<Element>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) intersecting.add(entry.target);
+          else intersecting.delete(entry.target);
+        }
+        setLight(intersecting.size > 0);
+      },
+      { rootMargin: "0px 0px -90% 0px", threshold: 0 },
+    );
+    targets.forEach((t) => observer.observe(t));
+    return () => observer.disconnect();
+  }, [location.pathname]);
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors ${
-        scrolled ? "border-b border-navy/10 bg-cream/95 backdrop-blur" : "bg-transparent"
+        light
+          ? "border-b border-ink/10 bg-white/95 backdrop-blur"
+          : scrolled
+            ? "border-b border-navy/10 bg-cream/95 backdrop-blur"
+            : "bg-transparent"
       }`}
+      style={light ? ({ "--color-navy": "var(--color-ink)" } as React.CSSProperties) : undefined}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-6 lg:px-10">
+      <div className="flex h-24 w-full items-center justify-between gap-6 px-6 lg:px-10">
         <Link to="/" className="flex min-w-0 items-center gap-3">
-          <Logo className="h-9 w-9 shrink-0" />
+          <Logo className="h-20 w-20 shrink-0" inverted={!light} />
           <span className="hidden truncate text-sm text-navy sm:block">
             Law office of {firmInfo.legalName}
           </span>

@@ -8,6 +8,7 @@ type Props = {
   type?: "button" | "submit";
   variant?: "solid" | "outline" | "ghost";
   className?: string;
+  disabled?: boolean;
   children: ReactNode;
 };
 
@@ -18,6 +19,7 @@ export default function Button({
   type = "button",
   variant = "solid",
   className = "",
+  disabled = false,
   children,
 }: Props) {
   const base =
@@ -28,7 +30,7 @@ export default function Button({
       : variant === "ghost"
         ? "border border-white/40 bg-transparent text-white hover:bg-white hover:text-ink hover:border-white"
         : "border border-ink/15 bg-white text-ink hover:bg-ink hover:text-white hover:border-ink";
-  const cls = `${base} ${styles} ${className}`;
+  const cls = `${base} ${styles} ${disabled ? "pointer-events-none opacity-60" : ""} ${className}`;
 
   if (to) {
     return (
@@ -45,7 +47,7 @@ export default function Button({
     );
   }
   return (
-    <button type={type} onClick={onClick} className={cls}>
+    <button type={type} onClick={onClick} disabled={disabled} className={cls}>
       {children}
     </button>
   );
