@@ -31,7 +31,7 @@ export default function AttorneyPage() {
         path={`/${attorney.slug}`}
       />
       <div className="mx-auto grid max-w-[100rem] grid-cols-1 gap-10 lg:grid-cols-[420px_1fr] lg:gap-16">
-        <div className="overflow-hidden rounded-[6px] bg-ink/10 lg:sticky lg:top-32 lg:self-start" style={{ aspectRatio: "3 / 4" }}>
+        <div className="overflow-hidden rounded-[6px] bg-ink/10 lg:sticky lg:top-36 lg:self-start" style={{ aspectRatio: "3 / 4" }}>
           {attorney.photo ? (
             <img
               src={attorney.photo}

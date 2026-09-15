@@ -6,9 +6,6 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 sm:flex-row sm:items-start sm:justify-between lg:px-10">
         <div>
           <p className="font-serif text-3xl text-navy">{firmInfo.legalName}</p>
-          <p className="mt-2 text-navy/60">
-            A Partnership Including Professional Corporations
-          </p>
         </div>
 
         <div className="space-y-4 text-navy/80 sm:text-right">

@@ -26,7 +26,7 @@ const heroVideos = [
 const heroTexts = [
   "Southern California's high-asset family law attorneys",
   "Your needs, pace, and family. Your family law attorneys.",
-  "Law office of Kaplan, Trope, Gekht, & DeCarolis, LLP",
+  "Kaplan, Trope, Gekht, & DeCarolis, LLP",
 ];
 
 const getHeroTextIndex = () => {
@@ -50,7 +50,7 @@ export default function Home() {
         description="Southern California's high-asset family law attorneys, handling divorce, custody, support, and complex asset division with care and strategic judgment."
         path="/"
       />
-      <section className="relative -mt-24 flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
+      <section className="relative -mt-28 flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
         <HeroVideoCarousel videos={heroVideos} />
         <div className="relative mx-auto max-w-3xl">
           <h1 className="font-serif text-5xl leading-tight text-navy sm:text-6xl">
@@ -73,7 +73,7 @@ export default function Home() {
         style={{ "--color-navy": "var(--color-ink)" } as React.CSSProperties}
       >
         <div className="mx-auto grid w-full max-w-[100rem] grid-cols-1 gap-10 lg:grid-cols-[320px_1fr] lg:gap-16">
-          <h2 className="font-serif text-3xl text-navy sm:text-4xl lg:sticky lg:top-32 lg:self-start">
+          <h2 className="font-serif text-3xl text-navy sm:text-4xl lg:sticky lg:top-36 lg:self-start">
             How we help
           </h2>
           <div>

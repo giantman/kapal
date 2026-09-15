@@ -190,7 +190,7 @@ export const getService = (slug: string) =>
 export const firmInfo = {
   name: "Kaplan Trope Gekht & DeCarolis",
   legalName: "Kaplan, Trope, Gekht & DeCarolis, LLP",
-  address: "10866 Wilshire Boulevard, Suite 1250, Los Angeles, CA 90024",
+  address: "10866 Wilshire Boulevard, Penthouse / Suite 1650, Los Angeles, CA 90024",
   phone: "310-473-0798",
   fax: "310-473-0625",
   mapUrl: "https://goo.gl/maps/MPWjufNGoqQ1bh9fA",

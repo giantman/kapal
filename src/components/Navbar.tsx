@@ -4,8 +4,41 @@ import Logo from "./Logo";
 import Button from "./Button";
 import { firmInfo, services } from "../data/services";
 
-const navLinkCls = ({ isActive }: { isActive: boolean }) =>
-  `text-sm transition-colors ${isActive ? "text-navy" : "text-navy/60 hover:text-navy"}`;
+function NavItem({
+  to,
+  end,
+  forceActive,
+  children,
+}: {
+  to: string;
+  end?: boolean;
+  forceActive?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <NavLink to={to} end={end} className="group relative py-1">
+      {({ isActive }) => {
+        const active = isActive || forceActive;
+        return (
+          <>
+            <span
+              className={`text-sm transition-colors ${
+                active ? "text-navy" : "text-navy/60 group-hover:text-navy"
+              }`}
+            >
+              {children}
+            </span>
+            <span
+              className={`absolute inset-x-0 -bottom-0.5 h-px origin-left bg-navy transition-transform duration-300 ease-out ${
+                active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+              }`}
+            />
+          </>
+        );
+      }}
+    </NavLink>
+  );
+}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -55,41 +88,34 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors ${
         light
-          ? "border-b border-ink/10 bg-white/95 backdrop-blur"
+          ? "bg-white/95 backdrop-blur"
           : scrolled
-            ? "border-b border-navy/10 bg-cream/95 backdrop-blur"
+            ? "bg-cream/95 backdrop-blur"
             : "bg-transparent"
       }`}
       style={light ? ({ "--color-navy": "var(--color-ink)" } as React.CSSProperties) : undefined}
     >
-      <div className="flex h-24 w-full items-center justify-between gap-6 px-6 lg:px-10">
+      <div className="flex h-28 w-full items-center justify-between gap-6 px-6 lg:px-10">
         <Link to="/" className="flex min-w-0 items-center gap-3">
-          <Logo className="h-20 w-20 shrink-0" inverted={!light} />
-          <span className="hidden truncate text-sm text-navy sm:block">
-            Law office of {firmInfo.legalName}
+          <Logo className="h-24 w-24 shrink-0" inverted={!light} />
+          <span className="hidden truncate text-lg text-navy sm:block">
+            {firmInfo.legalName}
           </span>
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
-          <NavLink to="/" end className={navLinkCls}>
+          <NavItem to="/" end>
             Home
-          </NavLink>
+          </NavItem>
 
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                `text-sm transition-colors ${
-                  isActive || servicesOpen ? "text-navy" : "text-navy/60 hover:text-navy"
-                }`
-              }
-            >
+            <NavItem to="/services" forceActive={servicesOpen}>
               Services
-            </NavLink>
+            </NavItem>
             {servicesOpen && (
               <div className="absolute left-1/2 top-full w-[520px] -translate-x-1/2 pt-4">
                 <div className="grid grid-cols-2 gap-x-8 gap-y-1 rounded-lg border border-ink/10 bg-white p-6 shadow-xl">
@@ -107,17 +133,13 @@ export default function Navbar() {
             )}
           </div>
 
-          <NavLink to="/firm" className={navLinkCls}>
-            Attorneys
-          </NavLink>
-          <NavLink to="/contact" className={navLinkCls}>
-            Contact
-          </NavLink>
+          <NavItem to="/firm">Attorneys</NavItem>
+          <NavItem to="/contact">Contact</NavItem>
         </nav>
 
         <div className="hidden shrink-0 md:block">
           <Button to="/contact" variant="solid">
-            Request consultation
+            Request a consultation
           </Button>
         </div>
 
@@ -186,7 +208,7 @@ export default function Navbar() {
           </NavLink>
 
           <Button to="/contact" className="mt-2 w-full">
-            Request consultation
+            Request a consultation
           </Button>
         </nav>
       )}

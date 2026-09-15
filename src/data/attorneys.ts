@@ -10,7 +10,7 @@ export type Attorney = {
   slug: string;
   name: string;
   title: string;
-  group: "Partners" | "Associates";
+  group: "Partners" | "Associates" | "Of Counsel";
   summary: string;
   photo?: string;
   sections: { heading: string; body: string }[];
@@ -232,6 +232,58 @@ export const attorneys: Attorney[] = [
     group: "Associates",
     photo: saraTavakoli,
     summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
+    sections: [
+      {
+        heading: "Full biography coming soon",
+        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+      },
+    ],
+  },
+  {
+    slug: "carly-timm-bijold",
+    name: "Carly Timm-Bijold, Esq.",
+    title: "Associate Attorney",
+    group: "Associates",
+    summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
+    sections: [
+      {
+        heading: "Full biography coming soon",
+        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+      },
+    ],
+  },
+  {
+    slug: "clarissa-lopez",
+    name: "Clarissa Lopez, Esq.",
+    title: "Associate Attorney",
+    group: "Associates",
+    summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
+    sections: [
+      {
+        heading: "Full biography coming soon",
+        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+      },
+    ],
+  },
+  {
+    slug: "howard-posner",
+    name: "Howard Posner, Esq.",
+    title: "Associate Attorney",
+    group: "Associates",
+    summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
+    sections: [
+      {
+        heading: "Full biography coming soon",
+        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+      },
+    ],
+  },
+  {
+    slug: "katherine-c-aldin",
+    name: "Katherine C. Aldin, Esq.",
+    title: "Of Counsel",
+    group: "Of Counsel",
+    summary: "Of Counsel at Kaplan Trope Gekht & DeCarolis.",
     sections: [
       {
         heading: "Full biography coming soon",

@@ -16,7 +16,7 @@ function App() {
     <div className="flex min-h-screen flex-col">
       <ScrollToTop />
       <Navbar />
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-28">
         <Outlet />
       </main>
       <Footer />
