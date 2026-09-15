@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
+import Seo from "../components/Seo";
 import { services } from "../data/services";
 
 export default function Services() {
@@ -9,6 +10,11 @@ export default function Services() {
       className="w-full bg-white"
       style={{ "--color-navy": "var(--color-ink)" } as React.CSSProperties}
     >
+      <Seo
+        title="Family Law Services | Kaplan Trope Gekht & DeCarolis"
+        description="From divorce and custody to complex asset division and business valuations, our attorneys handle every facet of family law with care and precision."
+        path="/services"
+      />
       <div className="px-6 pt-20 pb-16 text-center lg:pt-24">
         <p className="text-xs font-medium tracking-widest text-navy/50 uppercase">
           Services

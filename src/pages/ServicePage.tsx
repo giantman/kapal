@@ -1,6 +1,7 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { getService, firmInfo } from "../data/services";
 import Button from "../components/Button";
+import Seo from "../components/Seo";
 
 export default function ServicePage() {
   const { slug } = useParams();
@@ -14,6 +15,11 @@ export default function ServicePage() {
       className="w-full bg-white"
       style={{ "--color-navy": "var(--color-ink)" } as React.CSSProperties}
     >
+      <Seo
+        title={`${service.title} Attorneys | Kaplan Trope Gekht & DeCarolis`}
+        description={service.description}
+        path={`/service/${service.slug}`}
+      />
       <div className="mx-auto max-w-3xl px-6 py-20 text-center lg:py-24">
         <Link to="/services" className="text-sm text-navy/60 hover:text-navy">
           ← Services

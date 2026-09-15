@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { firmInfo, services } from "../data/services";
 import Button from "../components/Button";
+import Seo from "../components/Seo";
 
 const fieldCls =
   "w-full border-0 border-b border-navy/25 bg-transparent px-0 py-2 text-navy placeholder-navy/40 outline-none focus:border-navy";
@@ -35,6 +36,11 @@ export default function Contact() {
       className="w-full bg-white px-6 py-20 lg:py-28"
       style={{ "--color-navy": "var(--color-ink)" } as React.CSSProperties}
     >
+      <Seo
+        title={`Contact Us | ${firmInfo.legalName}`}
+        description="Tell us about your situation and we'll get back to you in one business day. Request a consultation with our Southern California family law attorneys."
+        path="/contact"
+      />
       <div className="mx-auto max-w-3xl text-center">
         <h1 className="font-serif text-5xl text-navy sm:text-6xl">Get in touch.</h1>
         <p className="mt-4 text-navy/70">

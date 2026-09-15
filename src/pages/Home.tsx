@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
+import Seo from "../components/Seo";
 import ServicesAccordion from "../components/ServicesAccordion";
 import AttorneyCard from "../components/AttorneyCard";
 import HeroVideoCarousel from "../components/HeroVideoCarousel";
@@ -44,6 +45,11 @@ export default function Home() {
 
   return (
     <>
+      <Seo
+        title="Kaplan Trope Gekht & DeCarolis | Southern California Family Law Attorneys"
+        description="Southern California's high-asset family law attorneys, handling divorce, custody, support, and complex asset division with care and strategic judgment."
+        path="/"
+      />
       <section className="relative -mt-24 flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
         <HeroVideoCarousel videos={heroVideos} />
         <div className="relative mx-auto max-w-3xl">

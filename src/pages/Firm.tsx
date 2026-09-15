@@ -1,6 +1,7 @@
 import { firmInfo } from "../data/services";
 import AttorneysGrid from "../components/AttorneysGrid";
 import Button from "../components/Button";
+import Seo from "../components/Seo";
 
 export default function Firm() {
   return (
@@ -9,6 +10,11 @@ export default function Firm() {
       className="w-full bg-white"
       style={{ "--color-navy": "var(--color-ink)" } as React.CSSProperties}
     >
+      <Seo
+        title={`Attorneys | ${firmInfo.legalName}`}
+        description="A boutique family law practice serving Southern California, built on decades of combined experience in high-asset divorce, custody, and complex financial matters."
+        path="/firm"
+      />
       <div className="px-6 pt-20 pb-16 text-center lg:pt-24">
         <p className="text-xs font-medium tracking-widest text-navy/50 uppercase">
           Attorneys

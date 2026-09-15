@@ -3,6 +3,7 @@ import { getAttorney } from "../data/attorneys";
 import { firmInfo } from "../data/services";
 import Button from "../components/Button";
 import AttorneysGrid from "../components/AttorneysGrid";
+import Seo from "../components/Seo";
 
 const initials = (name: string) =>
   name
@@ -24,6 +25,11 @@ export default function AttorneyPage() {
       className="w-full bg-white px-6 py-16 lg:px-10 lg:py-24"
       style={{ "--color-navy": "var(--color-ink)" } as React.CSSProperties}
     >
+      <Seo
+        title={`${attorney.name} | ${firmInfo.legalName}`}
+        description={attorney.summary}
+        path={`/${attorney.slug}`}
+      />
       <div className="mx-auto grid max-w-[100rem] grid-cols-1 gap-10 lg:grid-cols-[420px_1fr] lg:gap-16">
         <div className="overflow-hidden rounded-[6px] bg-ink/10 lg:sticky lg:top-32 lg:self-start" style={{ aspectRatio: "3 / 4" }}>
           {attorney.photo ? (

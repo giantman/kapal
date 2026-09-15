@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://giantman.github.io/kapal/sitemap.xml
