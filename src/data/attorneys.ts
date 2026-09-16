@@ -7,6 +7,7 @@ import deborahTilton from "../assets/attorneys/deborah-tilton.jpg";
 import saraTavakoli from "../assets/attorneys/sara-tavakoli.png";
 import michaelTrope from "../assets/attorneys/michael-trope.jpg";
 import patrickDecarolis from "../assets/attorneys/patrick-decarolis.jpg";
+import clarissaLopez from "../assets/attorneys/clarissa-lopez.webp";
 
 export type Attorney = {
   slug: string;
@@ -110,11 +111,24 @@ export const attorneys: Attorney[] = [
     title: "Partner",
     group: "Partners",
     photo: patrickDecarolis,
-    summary: "Partner at Kaplan Trope Gekht & DeCarolis.",
+    summary:
+      "A certified family law specialist who has been practicing law for more than 40 years.",
     sections: [
       {
-        heading: "Full biography coming soon",
-        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+        heading: "Professional Experience",
+        body: "Early in his career, DeCarolis was associated with Manley Freid and Paul Caruso before opening his own family law practice in 1982. In 1997, he was a founding partner in DeCarolis & Trope, which merged in 2001 with Trope and Trope, becoming Trope & DeCarolis in 2007.",
+      },
+      {
+        heading: "Judicial & Mediation Service",
+        body: "DeCarolis has served as a Judge pro tem in the Los Angeles Superior Court in Santa Monica and Van Nuys, and as a member of the Mediation Panel for the Family Law departments in the Central and West districts.",
+      },
+      {
+        heading: "Notable Cases",
+        body: "He was trial and appellate counsel in the international move-away case Condon v. Cooper.",
+      },
+      {
+        heading: "Publications",
+        body: "DeCarolis is an editorial consultant for Matthew Bender and has contributed to the Rutter Group in its family law publication.",
       },
     ],
   },
@@ -283,11 +297,17 @@ export const attorneys: Attorney[] = [
     name: "Clarissa Lopez, Esq.",
     title: "Associate Attorney",
     group: "Associates",
-    summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
+    photo: clarissaLopez,
+    summary:
+      "Practicing family law exclusively since 2002, advising and representing clients in all aspects of family law.",
     sections: [
       {
-        heading: "Full biography coming soon",
-        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+        heading: "Education",
+        body: "Bachelor's Degree with honors from the University of California, Santa Barbara. Law degree from the University of California, Los Angeles.",
+      },
+      {
+        heading: "Professional Experience",
+        body: "Previously worked with non-profit organizations, criminal prosecutors, and political advocacy groups before beginning to practice family law exclusively in 2002. Has advised and represented clients in all aspects of family law, including dissolution of marriages and domestic partnerships, child custody and visitation, child support, spousal support, division of assets and other financial claims, with the occasional related detour into civil and probate law.",
       },
     ],
   },
