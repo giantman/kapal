@@ -8,6 +8,8 @@ import saraTavakoli from "../assets/attorneys/sara-tavakoli.png";
 import michaelTrope from "../assets/attorneys/michael-trope.jpg";
 import patrickDecarolis from "../assets/attorneys/patrick-decarolis.jpg";
 import clarissaLopez from "../assets/attorneys/clarissa-lopez.webp";
+import carlyTimmBijold from "../assets/attorneys/carly-timm-bijold.jpg";
+import howardPosner from "../assets/attorneys/howard-posner.jpg";
 
 export type Attorney = {
   slug: string;
@@ -284,11 +286,17 @@ export const attorneys: Attorney[] = [
     name: "Carly Timm-Bijold, Esq.",
     title: "Associate Attorney",
     group: "Associates",
-    summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
+    photo: carlyTimmBijold,
+    summary:
+      "Extensive legal experience in both the public and private sector, with professional interests spanning health law, development policy, international relations, and case management.",
     sections: [
       {
-        heading: "Full biography coming soon",
-        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+        heading: "Education",
+        body: "Graduate of Loyola Law School, Los Angeles.",
+      },
+      {
+        heading: "Professional Experience",
+        body: "Former project manager for the nation's #1 EHR software company, with additional background in Federal Relations. Completed a clerkship with the nation's largest civil litigation appellate firm and a corporate compliance externship with the largest non-profit hospital system in the western United States.",
       },
     ],
   },
@@ -316,11 +324,17 @@ export const attorneys: Attorney[] = [
     name: "Howard Posner, Esq.",
     title: "Associate Attorney",
     group: "Associates",
-    summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
+    photo: howardPosner,
+    summary:
+      "A dedicated attorney, fiercely loyal to clients and sensitive to their needs and goals.",
     sections: [
       {
-        heading: "Full biography coming soon",
-        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+        heading: "Professional Approach",
+        body: "Excellent verbal, writing, and research skills, with an extremely organized and detail-oriented approach and a keen sense of prioritization.",
+      },
+      {
+        heading: "Background",
+        body: "Came to law as a second career after several years in film production.",
       },
     ],
   },
