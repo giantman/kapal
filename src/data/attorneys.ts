@@ -5,6 +5,8 @@ import michelleTaran from "../assets/attorneys/michelle-taran.jpeg";
 import droritRaitor from "../assets/attorneys/drorit-raitor.jpg";
 import deborahTilton from "../assets/attorneys/deborah-tilton.jpg";
 import saraTavakoli from "../assets/attorneys/sara-tavakoli.png";
+import michaelTrope from "../assets/attorneys/michael-trope.jpg";
+import patrickDecarolis from "../assets/attorneys/patrick-decarolis.jpg";
 
 export type Attorney = {
   slug: string;
@@ -84,11 +86,21 @@ export const attorneys: Attorney[] = [
     name: "Michael L. Trope, Esq.",
     title: "Partner",
     group: "Partners",
-    summary: "Partner at Kaplan Trope Gekht & DeCarolis.",
+    photo: michaelTrope,
+    summary:
+      "For more than thirty years, Michael Trope has handled complex divorces, custody disputes, and civil cases in Los Angeles, alongside a career representing NFL players.",
     sections: [
       {
-        heading: "Full biography coming soon",
-        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+        heading: "Professional Background",
+        body: "Michael Trope's professional life spans two very different arenas: the high-stakes world of NFL representation and the equally intense landscape of Los Angeles family law. For more than thirty years, he has handled complex divorces, custody disputes and civil cases in a city known for public scrutiny and difficult litigation.",
+      },
+      {
+        heading: "Education",
+        body: "B.A. from the University of Southern California, magna cum laude (1973). J.D. from Loyola Marymount University (1981).",
+      },
+      {
+        heading: "Professional Memberships",
+        body: "State Bar of California.",
       },
     ],
   },
@@ -97,6 +109,7 @@ export const attorneys: Attorney[] = [
     name: "Patrick DeCarolis, Esq.",
     title: "Partner",
     group: "Partners",
+    photo: patrickDecarolis,
     summary: "Partner at Kaplan Trope Gekht & DeCarolis.",
     sections: [
       {
