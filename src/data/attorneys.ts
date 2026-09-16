@@ -231,11 +231,28 @@ export const attorneys: Attorney[] = [
     title: "Associate Attorney",
     group: "Associates",
     photo: saraTavakoli,
-    summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
+    summary:
+      "Represents clients in sophisticated and high-conflict family law matters, bringing daily trial experience and a meticulous, strategic approach to every case.",
     sections: [
       {
-        heading: "Full biography coming soon",
-        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+        heading: "Practice Focus",
+        body: "Sara Tavakoli represents clients in sophisticated and high-conflict family law matters, including the determination of child and spousal support, complex property division, and strategic motion practice. Bringing years of daily trial experience representing families in dependency court, Sara joined the firm in 2024, working closely with the firm's partners on high stakes litigation and trials, while independently handling contested motion practice. Sara brings a meticulous, strategic, and highly responsive approach to her practice, providing clients with thoughtful guidance, clear explanations, and individualized attention throughout each stage of their case.",
+      },
+      {
+        heading: "Professional Experience",
+        body: "Sara graduated from Southwestern Law School in 2020 and was admitted to the California Bar in January 2021. She began her legal career in public service as court-appointed counsel for parents in Los Angeles County dependency proceedings, where she handled hundreds of contested hearings and trials and developed valuable courtroom experience representing clients in high-stakes matters involving the Department of Children and Family Services.",
+      },
+      {
+        heading: "Public Service & Community Involvement",
+        body: "During law school, Sara worked with Levitt & Quinn Family Law Center, Inner City Law Center, the Legal Aid Foundation of Los Angeles, Children's Law Center of California, and the Lanterman Regional Center legal clinic serving children with developmental disabilities and specialized educational needs. These experiences reflect a longstanding commitment to advocacy and client service that continues to inform her family law practice today.",
+      },
+      {
+        heading: "Education",
+        body: "Bachelor of Arts from the University of California, Berkeley, where she majored in Peace and Conflict Studies and minored in Spanish Literature. Juris Doctor from Southwestern Law School (2020).",
+      },
+      {
+        heading: "Languages",
+        body: "Fluent in Farsi.",
       },
     ],
   },
