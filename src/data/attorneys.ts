@@ -8,8 +8,9 @@ import saraTavakoli from "../assets/attorneys/sara-tavakoli.png";
 import michaelTrope from "../assets/attorneys/michael-trope.jpg";
 import patrickDecarolis from "../assets/attorneys/patrick-decarolis.jpg";
 import clarissaLopez from "../assets/attorneys/clarissa-lopez.webp";
-import carlyTimmBijold from "../assets/attorneys/carly-timm-bijold.jpg";
+import carlyTimmBijold from "../assets/attorneys/carly-timm-bijold.png";
 import howardPosner from "../assets/attorneys/howard-posner.jpg";
+import katherineCAldin from "../assets/attorneys/katherine-c-aldin.png";
 
 export type Attorney = {
   slug: string;
@@ -277,7 +278,7 @@ export const attorneys: Attorney[] = [
       },
       {
         heading: "Public Service & Community Involvement",
-        body: "During law school, Sara worked with several public interest organizations, including Levitt & Quinn Family Law Center, Inner City Law Center, the Legal Aid Foundation of Los Angeles, Children's Law Center of California, and the Lanterman Regional Center legal clinic. There, she advocated for children with developmental disabilities and specialized educational needs, reflecting a longstanding commitment to client advocacy that continues to shape her family law practice.",
+        body: "During law school, Sara competed on the Moot Court team, and worked with several public interest organizations, including Levitt & Quinn Family Law Center, Inner City Law Center, the Legal Aid Foundation of Los Angeles, Children’s Law Center of California, and the Lanterman Regional Center legal clinic. There, she advocated for children with developmental disabilities and specialized educational needs, reflecting a longstanding commitment to client advocacy that continues to shape her family law practice.",
       },
     ],
   },
@@ -288,15 +289,19 @@ export const attorneys: Attorney[] = [
     group: "Associates",
     photo: carlyTimmBijold,
     summary:
-      "Extensive legal experience in both the public and private sector, with professional interests spanning health law, development policy, international relations, and case management.",
+      "Since 2017, has worked exclusively at Los Angeles-based family law firms, assisting in dozens of high-net-worth and complex dissolution cases from inception to trial.",
     sections: [
       {
         heading: "Education",
-        body: "Graduate of Loyola Law School, Los Angeles.",
+        body: "A native of Duluth, Minnesota, Carly Timm-Bijold graduated cum laude with a degree in Government from Georgetown University, where she was a member of the university’s nationally ranked mock trial team. She went on to obtain her J.D. from Loyola Law School, Los Angeles, where she spent two years as a member of the Loyola of Los Angeles Law Review. During her time at Loyola, Ms. Timm-Bijold volunteered with the LA HIV Law and Policy Project and National Health Law Program and worked for the nationally recognized appellate firm of Horvitz & Levy LLP as well as Cedars-Sinai Medical Center's Office of Research Compliance and Quality Improvement.",
       },
       {
         heading: "Professional Experience",
-        body: "Former project manager for the nation's #1 EHR software company, with additional background in Federal Relations. Completed a clerkship with the nation's largest civil litigation appellate firm and a corporate compliance externship with the largest non-profit hospital system in the western United States.",
+        body: "Since 2017, Ms. Timm-Bijold has worked exclusively at Los Angeles-based family law firms, where she has assisted in dozens of high-net-worth and complex dissolution cases from inception to trial. She has also co-authored an article for The Daily Journal on challenging and defending premarital agreements.",
+      },
+      {
+        heading: "Professional Memberships",
+        body: "Ms. Timm-Bijold is a member of the Beverly Hills Bar Association and the Family Law section of the California Lawyers Association.",
       },
     ],
   },
@@ -343,6 +348,7 @@ export const attorneys: Attorney[] = [
     name: "Katherine C. Aldin, Esq.",
     title: "Of Counsel",
     group: "Of Counsel",
+    photo: katherineCAldin,
     summary: "Of Counsel at Kaplan Trope Gekht & DeCarolis.",
     sections: [
       {
