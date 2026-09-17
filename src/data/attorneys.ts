@@ -344,6 +344,19 @@ export const attorneys: Attorney[] = [
     ],
   },
   {
+    slug: "brandon-johnson",
+    name: "Brandon Johnson, Esq.",
+    title: "Associate Attorney",
+    group: "Associates",
+    summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
+    sections: [
+      {
+        heading: "Full biography coming soon",
+        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+      },
+    ],
+  },
+  {
     slug: "katherine-c-aldin",
     name: "Katherine C. Aldin, Esq.",
     title: "Of Counsel",
