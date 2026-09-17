@@ -55,7 +55,9 @@ export default function AttorneyPage() {
             {attorney.name}
           </h1>
           <p className="mt-2 font-medium text-navy/60">{attorney.title}</p>
-          <p className="mt-6 max-w-2xl text-navy/85">{attorney.summary}</p>
+          <p className="mt-6 max-w-2xl whitespace-pre-line text-navy/85">
+            {attorney.summary}
+          </p>
 
           <div className="mt-10 max-w-2xl space-y-10">
             {attorney.sections.map((s, i) => (
