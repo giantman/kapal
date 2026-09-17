@@ -58,10 +58,14 @@ export default function AttorneyPage() {
           <p className="mt-6 max-w-2xl text-navy/85">{attorney.summary}</p>
 
           <div className="mt-10 max-w-2xl space-y-10">
-            {attorney.sections.map((s) => (
-              <div key={s.heading}>
-                <h2 className="font-serif text-xl text-navy">{s.heading}</h2>
-                <p className="mt-3 leading-relaxed text-navy/80">{s.body}</p>
+            {attorney.sections.map((s, i) => (
+              <div key={s.heading ?? i}>
+                {s.heading && (
+                  <h2 className="font-serif text-xl text-navy">{s.heading}</h2>
+                )}
+                <p className="mt-3 leading-relaxed text-navy/80 first:mt-0">
+                  {s.body}
+                </p>
               </div>
             ))}
           </div>

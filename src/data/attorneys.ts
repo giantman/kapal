@@ -19,7 +19,7 @@ export type Attorney = {
   group: "Partners" | "Associates" | "Of Counsel";
   summary: string;
   photo?: string;
-  sections: { heading: string; body: string }[];
+  sections: { heading?: string; body: string }[];
 };
 
 export const attorneys: Attorney[] = [
@@ -262,22 +262,15 @@ export const attorneys: Attorney[] = [
     group: "Associates",
     photo: saraTavakoli,
     summary:
-      "Represents clients in sophisticated and high-conflict family law matters, bringing a meticulous, strategic, and responsive approach to her practice.",
+      "Advises clients on a broad range of family law issues, including child and spousal support, complex property division, and motion practice.",
     sections: [
       {
-        heading: "Practice Focus",
-        body: "Sara Tavakoli represents clients in sophisticated and high-conflict family law matters, bringing a meticulous, strategic, and responsive approach to her practice. She advises clients on a broad range of issues, including child and spousal support, complex property division, and motion practice, while providing thoughtful counsel, clear communication, and personalized attention at every stage of the legal process.",
+        body: "Sara Tavakoli represents clients in sophisticated and high-conflict family law matters, bringing a meticulous, strategic, and responsive approach to her practice. She advises clients on a broad range of issues, including child and spousal support, complex property division, and motion practice, while providing thoughtful counsel, clear communication, and personalized attention at every stage of the legal process. Prior to entering private practice, Sara served as court-appointed counsel for parents in Los Angeles County dependency proceedings. In that role, she handled hundreds of contested hearings and trials, gaining substantial courtroom experience in high-stakes matters involving the Department of Children and Family Services.",
       },
       {
-        heading: "Professional Experience",
-        body: "Prior to entering private practice, Sara served as court-appointed counsel for parents in Los Angeles County dependency proceedings. In that role, she handled hundreds of contested hearings and trials, gaining substantial courtroom experience in high-stakes matters involving the Department of Children and Family Services.",
-      },
-      {
-        heading: "Education",
         body: "Sara earned her Juris Doctor from Southwestern Law School and her Bachelor of Arts from the University of California, Berkeley, where she majored in Peace and Conflict Studies and minored in Spanish Literature.",
       },
       {
-        heading: "Public Service & Community Involvement",
         body: "During law school, Sara competed on the Moot Court team, and worked with several public interest organizations, including Levitt & Quinn Family Law Center, Inner City Law Center, the Legal Aid Foundation of Los Angeles, Children’s Law Center of California, and the Lanterman Regional Center legal clinic. There, she advocated for children with developmental disabilities and specialized educational needs, reflecting a longstanding commitment to client advocacy that continues to shape her family law practice.",
       },
     ],
