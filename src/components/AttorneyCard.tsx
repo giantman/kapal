@@ -45,12 +45,6 @@ export default function AttorneyCard({
           </p>
         </Link>
         <p className="mt-0.5 text-sm text-navy/60">{attorney.title}</p>
-        <Link
-          to={`/${attorney.slug}`}
-          className="mt-4 inline-block text-sm text-navy underline underline-offset-4 hover:text-navy/70"
-        >
-          Read bio.
-        </Link>
       </div>
     </div>
   );
