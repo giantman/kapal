@@ -10,7 +10,9 @@ import patrickDecarolis from "../assets/attorneys/patrick-decarolis.jpg";
 import clarissaLopez from "../assets/attorneys/clarissa-lopez.webp";
 import carlyTimmBijold from "../assets/attorneys/carly-timm-bijold.png";
 import howardPosner from "../assets/attorneys/howard-posner.jpg";
+import katherineSuOconnor from "../assets/attorneys/katherine-su-oconnor.png";
 import katherineCAldin from "../assets/attorneys/katherine-c-aldin.png";
+import brandonJohnson from "../assets/attorneys/brandon-johnson.png";
 
 export type Attorney = {
   slug: string;
@@ -331,6 +333,7 @@ export const attorneys: Attorney[] = [
     name: "Brandon Johnson, Esq.",
     title: "Associate Attorney",
     group: "Associates",
+    photo: brandonJohnson,
     summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
     sections: [
       {
@@ -345,6 +348,20 @@ export const attorneys: Attorney[] = [
     title: "Of Counsel",
     group: "Of Counsel",
     photo: katherineCAldin,
+    summary: "Of Counsel at Kaplan Trope Gekht & DeCarolis.",
+    sections: [
+      {
+        heading: "Full biography coming soon",
+        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+      },
+    ],
+  },
+  {
+    slug: "katherine-su-oconnor",
+    name: "Katherine Su O’Connor, Esq.",
+    title: "Of Counsel",
+    group: "Of Counsel",
+    photo: katherineSuOconnor,
     summary: "Of Counsel at Kaplan Trope Gekht & DeCarolis.",
     sections: [
       {

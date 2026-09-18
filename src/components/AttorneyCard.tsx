@@ -40,7 +40,7 @@ export default function AttorneyCard({
 
       <div className="pt-4">
         <Link to={`/${attorney.slug}`}>
-          <p className="font-serif text-xl text-navy group-hover:underline">
+          <p className="font-serif text-lg text-navy group-hover:underline">
             {attorney.name}
           </p>
         </Link>
