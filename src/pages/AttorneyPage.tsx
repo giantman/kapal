@@ -27,7 +27,7 @@ export default function AttorneyPage() {
     >
       <Seo
         title={`${attorney.name} | ${firmInfo.legalName}`}
-        description={attorney.summary}
+        description={attorney.seoDescription ?? attorney.summary}
         path={`/${attorney.slug}`}
       />
       <div className="mx-auto grid max-w-[100rem] grid-cols-1 gap-10 lg:grid-cols-[420px_1fr] lg:gap-16">
@@ -58,6 +58,22 @@ export default function AttorneyPage() {
           <p className="mt-6 max-w-2xl whitespace-pre-line text-navy/85">
             {attorney.summary}
           </p>
+          {attorney.links && (
+            <div className="mt-4 max-w-2xl space-y-4 text-navy/85">
+              {attorney.links.map((href) => (
+                <div key={href}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="break-all underline hover:text-navy"
+                  >
+                    {href}
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
 
           <div className="mt-10 max-w-2xl space-y-10">
             {attorney.sections.map((s, i) => (
@@ -72,15 +88,17 @@ export default function AttorneyPage() {
             ))}
           </div>
 
-          <div className="mt-14 border-t border-navy/20 pt-10">
-            <h2 className="font-serif text-2xl text-navy sm:text-3xl">
-              Discuss your case with {attorney.name.split(",")[0]}
-            </h2>
-            <p className="mt-3 text-navy/60">{firmInfo.phone}</p>
-            <Button to="/contact" variant="solid" className="mt-8">
-              Request a consultation
-            </Button>
-          </div>
+          {!attorney.hideContact && (
+            <div className="mt-14 border-t border-navy/20 pt-10">
+              <h2 className="font-serif text-2xl text-navy sm:text-3xl">
+                Discuss your case with {attorney.name.split(",")[0]}
+              </h2>
+              <p className="mt-3 text-navy/60">{firmInfo.phone}</p>
+              <Button to="/contact" variant="solid" className="mt-8">
+                Request a consultation
+              </Button>
+            </div>
+          )}
         </div>
       </div>
 

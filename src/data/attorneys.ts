@@ -13,6 +13,7 @@ import howardPosner from "../assets/attorneys/howard-posner.jpg";
 import katherineSuOconnor from "../assets/attorneys/katherine-su-oconnor.png";
 import katherineCAldin from "../assets/attorneys/katherine-c-aldin.png";
 import brandonJohnson from "../assets/attorneys/brandon-johnson.png";
+import melissaFresquez from "../assets/attorneys/melissa-fresquez.jpg";
 
 export type Attorney = {
   slug: string;
@@ -21,6 +22,9 @@ export type Attorney = {
   group: "Partners" | "Associates" | "Of Counsel";
   summary: string;
   photo?: string;
+  seoDescription?: string;
+  links?: string[];
+  hideContact?: boolean;
   sections: { heading?: string; body: string }[];
 };
 
@@ -93,22 +97,15 @@ export const attorneys: Attorney[] = [
     title: "Partner",
     group: "Partners",
     photo: michaelTrope,
-    summary:
-      "For more than thirty years, Michael Trope has handled complex divorces, custody disputes, and civil cases in Los Angeles, alongside a career representing NFL players.",
-    sections: [
-      {
-        heading: "Professional Background",
-        body: "Michael Trope's professional life spans two very different arenas: the high-stakes world of NFL representation and the equally intense landscape of Los Angeles family law. For more than thirty years, he has handled complex divorces, custody disputes and civil cases in a city known for public scrutiny and difficult litigation.",
-      },
-      {
-        heading: "Education",
-        body: "B.A. from the University of Southern California, magna cum laude (1973). J.D. from Loyola Marymount University (1981).",
-      },
-      {
-        heading: "Professional Memberships",
-        body: "State Bar of California.",
-      },
+    summary: "For more information about Michael L. Trope, please see:",
+    seoDescription:
+      "Michael L. Trope, Partner at Kaplan Trope Gekht & DeCarolis, has handled complex divorces, custody disputes, and civil cases in Los Angeles for more than thirty years.",
+    links: [
+      "https://michaeltrope.law/",
+      "https://en.wikipedia.org/wiki/Michael_Trope",
     ],
+    hideContact: true,
+    sections: [],
   },
   {
     slug: "patrick-decarolis",
@@ -311,22 +308,13 @@ export const attorneys: Attorney[] = [
   },
   {
     slug: "howard-posner",
-    name: "Howard Posner, Esq.",
+    name: "Howard Posner, Esq., CFLR",
     title: "Associate Attorney",
     group: "Associates",
     photo: howardPosner,
     summary:
-      "A dedicated attorney, fiercely loyal to clients and sensitive to their needs and goals.",
-    sections: [
-      {
-        heading: "Professional Approach",
-        body: "Excellent verbal, writing, and research skills, with an extremely organized and detail-oriented approach and a keen sense of prioritization.",
-      },
-      {
-        heading: "Background",
-        body: "Came to law as a second career after several years in film production.",
-      },
-    ],
+      "Howard Posner is a Certified Family Law Specialist, certified by the State Bar of California Board of Legal Specialization. His practice has been devoted exclusively to family law and he has been representing clients in complex family law matters for over 15 years.\n\nBefore joining Kaplan, Trope, Gekht & DeCarolis, LLP, Mr. Posner practiced at Trope Family Law, LLP; Trope Fein, LLP; Trope & DeCarolis, LLP; and Kolodny Law Group.\n\nMr. Posner earned his law degree, magna cum laude, from Abraham Lincoln University School of Law in May 2011. He also holds a Master of Fine Arts in Film Studies from Boston University and a Bachelor of Arts in English, summa cum laude, from the University of Massachusetts Boston.",
+    sections: [],
   },
   {
     slug: "brandon-johnson",
@@ -341,6 +329,16 @@ export const attorneys: Attorney[] = [
         body: "A detailed profile for this attorney is being prepared and will be added shortly.",
       },
     ],
+  },
+  {
+    slug: "melissa-r-fresquez",
+    name: "Melissa R. Fresquez, Esq.",
+    title: "Associate Attorney",
+    group: "Associates",
+    photo: melissaFresquez,
+    summary:
+      "Melissa is a graduate of the University of California, Irvine, and received her law degree from the University of Southern California. She began her career in the non-profit sector, focusing on domestic violence representation for victims. In 2004, she transitioned to private practice at boutique family law firms. With over 20 years of family law expertise, Melissa has represented clients in all aspects of family law, including dissolutions, paternity issues, child support cases, prenuptial agreements, and post-judgment matters.",
+    sections: [],
   },
   {
     slug: "katherine-c-aldin",
@@ -362,11 +360,12 @@ export const attorneys: Attorney[] = [
     title: "Of Counsel",
     group: "Of Counsel",
     photo: katherineSuOconnor,
-    summary: "Of Counsel at Kaplan Trope Gekht & DeCarolis.",
+    summary:
+      "Katherine has practiced family law almost exclusively since 2006, with more than a dozen years of overlap in probate litigation.",
     sections: [
       {
-        heading: "Full biography coming soon",
-        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
+        heading: "Education",
+        body: "Born and raised in Los Angeles, Katherine graduated with a Bachelor's Degree from the University of California, Los Angeles. She obtained her Juris Doctorate from Southwestern School of Law.",
       },
     ],
   },

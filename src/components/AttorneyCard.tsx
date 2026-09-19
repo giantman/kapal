@@ -17,7 +17,7 @@ export default function AttorneyCard({
   className?: string;
 }) {
   return (
-    <div className={`group flex flex-col ${className}`}>
+    <div className={`group flex flex-col @container ${className}`}>
       <Link
         to={`/${attorney.slug}`}
         className="relative block overflow-hidden rounded-[6px]"
@@ -40,7 +40,7 @@ export default function AttorneyCard({
 
       <div className="pt-4">
         <Link to={`/${attorney.slug}`}>
-          <p className="font-serif text-lg text-navy group-hover:underline">
+          <p className="font-serif font-medium text-[clamp(0.6875rem,6cqw,1.125rem)] leading-snug text-navy group-hover:underline">
             {attorney.name}
           </p>
         </Link>
