@@ -322,13 +322,9 @@ export const attorneys: Attorney[] = [
     title: "Associate Attorney",
     group: "Associates",
     photo: brandonJohnson,
-    summary: "Associate Attorney at Kaplan Trope Gekht & DeCarolis.",
-    sections: [
-      {
-        heading: "Full biography coming soon",
-        body: "A detailed profile for this attorney is being prepared and will be added shortly.",
-      },
-    ],
+    summary:
+      "Since graduating from Loyola Law School, Los Angeles and being admitted to the State Bar of California in 2011, Mr. Johnson has spent over ten years working as an associate at Los Angeles-based family law firms, where he has assisted in dozens of family law cases from inception to trial and beyond. He has also co-authored articles that have been published in The Daily Journal and the Valley Lawyer Magazine, and was recognized by Super Lawyers Magazine as a “Southern California Rising Star” in 2021.",
+    sections: [],
   },
   {
     slug: "melissa-r-fresquez",
