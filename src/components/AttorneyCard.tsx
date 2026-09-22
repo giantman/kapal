@@ -44,7 +44,9 @@ export default function AttorneyCard({
             {attorney.name}
           </p>
         </Link>
-        <p className="mt-0.5 text-sm text-navy/60">{attorney.title}</p>
+        {attorney.group !== "Associates" && (
+          <p className="mt-0.5 text-sm text-navy/60">{attorney.title}</p>
+        )}
       </div>
     </div>
   );

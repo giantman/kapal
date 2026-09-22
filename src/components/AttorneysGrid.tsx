@@ -24,7 +24,7 @@ export default function AttorneysGrid({ exclude }: { exclude?: string }) {
 
   return (
     <div>
-      <AttorneyGroup heading="Partners" attorneys={attorneys.filter((a) => a.group === "Partners")} />
+      <AttorneyGroup heading="Founding Partners" attorneys={attorneys.filter((a) => a.group === "Founding Partners")} />
       <AttorneyGroup heading="Associates" attorneys={attorneys.filter((a) => a.group === "Associates")} />
       <AttorneyGroup heading="Of Counsel" attorneys={attorneys.filter((a) => a.group === "Of Counsel")} />
     </div>

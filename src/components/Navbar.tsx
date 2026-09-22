@@ -1,25 +1,28 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
 import Logo from "./Logo";
 import Button from "./Button";
-import { firmInfo, services } from "../data/services";
+import { firmInfo } from "../data/services";
+
+const HOW_WE_HELP_ID = "how-we-help";
 
 function NavItem({
   to,
   end,
-  forceActive,
+  active: activeOverride,
+  onClick,
   children,
 }: {
   to: string;
   end?: boolean;
-  forceActive?: boolean;
+  active?: boolean;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
   children: React.ReactNode;
 }) {
   return (
-    <NavLink to={to} end={end} className="group relative py-1">
+    <NavLink to={to} end={end} onClick={onClick} className="group relative py-1">
       {({ isActive }) => {
-        const active = isActive || forceActive;
+        const active = activeOverride ?? isActive;
         return (
           <>
             <span
@@ -43,16 +46,26 @@ function NavItem({
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [light, setLight] = useState(false);
   const location = useLocation();
+  const onHome = location.pathname === "/";
+  const howWeHelpActive = onHome && location.hash === `#${HOW_WE_HELP_ID}`;
+
+  // Router links to the current hash don't re-trigger the scroll effect in
+  // App, so handle the "already here" case directly.
+  const handleHowWeHelpClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    setOpen(false);
+    if (howWeHelpActive) {
+      e.preventDefault();
+      document
+        .getElementById(HOW_WE_HELP_ID)
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     setOpen(false);
-    setServicesOpen(false);
-    setMobileServicesOpen(false);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -105,38 +118,17 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
-          <NavItem to="/" end>
+          <NavItem to="/" end active={onHome && !howWeHelpActive}>
             Home
           </NavItem>
 
-          <div
-            className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
+          <NavItem
+            to={`/#${HOW_WE_HELP_ID}`}
+            active={howWeHelpActive}
+            onClick={handleHowWeHelpClick}
           >
-            <NavItem to="/services" forceActive={servicesOpen}>
-              Services
-            </NavItem>
-            {servicesOpen && (
-              <div className="absolute left-1/2 top-full w-[640px] -translate-x-1/2 pt-4">
-                <div className="grid grid-cols-2 gap-x-8 gap-y-1 rounded-lg border border-ink/10 bg-white p-6 shadow-xl">
-                  {services.map((s) => (
-                    <Link
-                      key={s.slug}
-                      to={`/service/${s.slug}`}
-                      className="group flex items-center justify-between gap-2 rounded px-2 py-1.5 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink"
-                    >
-                      {s.title}
-                      <ChevronRight
-                        className="shrink-0 text-ink/40 transition-transform group-hover:translate-x-1"
-                        size={16}
-                      />
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+            How we help
+          </NavItem>
 
           <NavItem to="/firm">Attorneys</NavItem>
           <NavItem to="/contact">Contact</NavItem>
@@ -170,40 +162,21 @@ export default function Navbar() {
 
       {open && (
         <nav className="flex flex-col gap-1 border-t border-navy/10 bg-cream px-6 py-4 md:hidden">
-          <NavLink to="/" end className={({ isActive }) => `py-2 text-base ${isActive ? "text-navy" : "text-navy/60"}`}>
+          <NavLink
+            to="/"
+            end
+            className={`py-2 text-base ${onHome && !howWeHelpActive ? "text-navy" : "text-navy/60"}`}
+          >
             Home
           </NavLink>
 
-          <div>
-            <div className="flex items-center justify-between">
-              <NavLink
-                to="/services"
-                className={({ isActive }) => `py-2 text-base ${isActive ? "text-navy" : "text-navy/60"}`}
-              >
-                Services
-              </NavLink>
-              <button
-                type="button"
-                aria-label="Toggle services list"
-                aria-expanded={mobileServicesOpen}
-                onClick={() => setMobileServicesOpen((v) => !v)}
-                className="p-2 text-navy/60"
-              >
-                <span className={`block transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}>
-                  ⌄
-                </span>
-              </button>
-            </div>
-            {mobileServicesOpen && (
-              <div className="mb-1 flex flex-col gap-1 border-l border-navy/10 pl-4">
-                {services.map((s) => (
-                  <Link key={s.slug} to={`/service/${s.slug}`} className="py-1.5 text-sm text-navy/60">
-                    {s.title}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+          <NavLink
+            to={`/#${HOW_WE_HELP_ID}`}
+            onClick={handleHowWeHelpClick}
+            className={`py-2 text-base ${howWeHelpActive ? "text-navy" : "text-navy/60"}`}
+          >
+            How we help
+          </NavLink>
 
           <NavLink to="/firm" className={({ isActive }) => `py-2 text-base ${isActive ? "text-navy" : "text-navy/60"}`}>
             Attorneys

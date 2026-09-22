@@ -68,6 +68,7 @@ export default function Home() {
       </section>
 
       <section
+        id="how-we-help"
         data-navbar-theme="light"
         className="flex min-h-screen w-full flex-col justify-center border-t border-navy/20 bg-white px-6 py-24 lg:px-10"
         style={{ "--color-navy": "var(--color-ink)" } as React.CSSProperties}

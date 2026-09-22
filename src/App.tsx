@@ -4,10 +4,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    const target = hash ? document.getElementById(hash.slice(1)) : null;
+    if (target) target.scrollIntoView({ behavior: "smooth" });
+    else window.scrollTo(0, 0);
+  }, [pathname, hash]);
   return null;
 }
 

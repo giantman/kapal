@@ -19,7 +19,7 @@ export type Attorney = {
   slug: string;
   name: string;
   title: string;
-  group: "Partners" | "Associates" | "Of Counsel";
+  group: "Founding Partners" | "Associates" | "Of Counsel";
   summary: string;
   photo?: string;
   seoDescription?: string;
@@ -33,7 +33,7 @@ export const attorneys: Attorney[] = [
     slug: "mark-vincent-kaplan",
     name: "Mark Vincent Kaplan, Esq.",
     title: "Founding Partner",
-    group: "Partners",
+    group: "Founding Partners",
     photo: markVincentKaplan,
     summary:
       "44 years practicing family law in California, with an AV Preeminent rating from Martindale-Hubbell and repeated recognition as a Southern California Super Lawyer.",
@@ -57,10 +57,26 @@ export const attorneys: Attorney[] = [
     ],
   },
   {
+    slug: "michael-trope",
+    name: "Michael L. Trope, Esq.",
+    title: "Founding Partner",
+    group: "Founding Partners",
+    photo: michaelTrope,
+    summary: "For more information about Michael L. Trope, please see:",
+    seoDescription:
+      "Michael L. Trope, Founding Partner at Kaplan Trope Gekht & DeCarolis, has handled complex divorces, custody disputes, and civil cases in Los Angeles for more than thirty years.",
+    links: [
+      "https://michaeltrope.law/",
+      "https://en.wikipedia.org/wiki/Michael_Trope",
+    ],
+    hideContact: true,
+    sections: [],
+  },
+  {
     slug: "garry-gekht",
     name: "Garry M. Gekht, Esq.",
-    title: "Partner",
-    group: "Partners",
+    title: "Founding Partner",
+    group: "Founding Partners",
     photo: garryGekht,
     summary:
       "A former forensic accountant and Certified Divorce Financial Analyst who has practiced family law since 1998, handling hundreds of cases involving complex financial analysis and asset valuation.",
@@ -92,26 +108,10 @@ export const attorneys: Attorney[] = [
     ],
   },
   {
-    slug: "michael-trope",
-    name: "Michael L. Trope, Esq.",
-    title: "Partner",
-    group: "Partners",
-    photo: michaelTrope,
-    summary: "For more information about Michael L. Trope, please see:",
-    seoDescription:
-      "Michael L. Trope, Partner at Kaplan Trope Gekht & DeCarolis, has handled complex divorces, custody disputes, and civil cases in Los Angeles for more than thirty years.",
-    links: [
-      "https://michaeltrope.law/",
-      "https://en.wikipedia.org/wiki/Michael_Trope",
-    ],
-    hideContact: true,
-    sections: [],
-  },
-  {
     slug: "patrick-decarolis",
     name: "Patrick DeCarolis, Esq.",
-    title: "Partner",
-    group: "Partners",
+    title: "Founding Partner",
+    group: "Founding Partners",
     photo: patrickDecarolis,
     summary:
       "A certified family law specialist who has been practicing law for more than 40 years.",
@@ -138,7 +138,7 @@ export const attorneys: Attorney[] = [
     slug: "drorit-raitor",
     name: "Drorit Bick Raiter, Esq.",
     title: "Partner",
-    group: "Partners",
+    group: "Founding Partners",
     photo: droritRaitor,
     summary:
       "Nearly two decades of complex family law litigation experience and a pragmatic, client-focused approach to her practice.",
