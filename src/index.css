@@ -1,15 +1,32 @@
-@import "@fontsource/cooper-hewitt/latin-400.css";
-@import "@fontsource/cooper-hewitt/latin-500.css";
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Newsreader Variable";
+  src: url("./assets/fonts/newsreader/newsreader-latin-standard-normal.woff2")
+    format("woff2-variations");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Newsreader Variable";
+  src: url("./assets/fonts/newsreader/newsreader-latin-standard-italic.woff2")
+    format("woff2-variations");
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
 @theme {
-  --font-serif: "Cooper Hewitt", Georgia, serif;
-  --font-sans: "Cooper Hewitt", Helvetica, Arial, system-ui, sans-serif;
-  --color-navy: #ffffff;
+  --font-display: "Newsreader Variable", Georgia, serif;
+  --font-serif: "Newsreader Variable", Georgia, serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --color-navy: #e9ebf2;
   --color-ink: #0c1d55;
   --color-ink-light: #1f3372;
   --color-cream: #233981;
   --color-cream-dark: #1c2e68;
+  --color-slate: #3c4f8f;
 }
 
 html {
@@ -19,6 +36,7 @@ html {
 
 body {
   font-family: var(--font-sans);
+  font-weight: 500;
   color: var(--color-navy);
   background: var(--color-cream);
   -webkit-font-smoothing: antialiased;

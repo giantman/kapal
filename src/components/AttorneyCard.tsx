@@ -20,8 +20,8 @@ export default function AttorneyCard({
     <div className={`group flex flex-col @container ${className}`}>
       <Link
         to={`/${attorney.slug}`}
-        className="relative block overflow-hidden rounded-[6px]"
-        style={{ aspectRatio: "4 / 5" }}
+        className="relative block overflow-hidden rounded-[8px]"
+        style={{ aspectRatio: "279 / 294" }}
       >
         {attorney.photo ? (
           <img
@@ -38,14 +38,14 @@ export default function AttorneyCard({
         )}
       </Link>
 
-      <div className="pt-4">
+      <div className="pt-2.5 text-center">
         <Link to={`/${attorney.slug}`}>
           <p className="font-serif font-medium text-[clamp(0.6875rem,6cqw,1.125rem)] leading-snug text-navy group-hover:underline">
             {attorney.name}
           </p>
         </Link>
         {attorney.group !== "Associates" && (
-          <p className="mt-0.5 text-sm text-navy/60">{attorney.title}</p>
+          <p className="mt-0.5 font-serif font-light text-sm text-navy/60">{attorney.title}</p>
         )}
       </div>
     </div>

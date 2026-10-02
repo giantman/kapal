@@ -16,17 +16,11 @@ export default function Firm() {
         path="/firm"
       />
       <div className="px-6 pt-20 pb-16 text-center lg:pt-24">
-        <p className="text-xs font-medium tracking-widest text-navy/50 uppercase">
-          Attorneys
-        </p>
-        <h1 className="mx-auto mt-3 max-w-3xl font-serif text-5xl text-navy sm:text-6xl">
-          {firmInfo.legalName}
+        <h1 className="mx-auto max-w-3xl font-display text-3xl leading-tight font-light text-cream sm:text-[42px]">
+          Over <span className="italic">150 years</span> of combined
+          experience in complex and high-stakes family law litigation, we're
+          here to help you and your family.
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-navy/70">
-          A boutique family law practice serving Southern California, built
-          on decades of combined experience in high-asset divorce, custody,
-          and complex financial matters.
-        </p>
       </div>
 
       <div className="mx-auto max-w-[100rem] px-6 pb-20 lg:px-10">

@@ -19,11 +19,11 @@ export default function ServicesAccordion({ services }: { services: Service[] })
   };
 
   return (
-    <div className="border-t border-navy/20">
+    <div>
       {services.map((s) => {
         const isOpen = openSlugs.has(s.slug);
         return (
-          <div key={s.slug} className="border-b border-navy/20">
+          <div key={s.slug} className="border-b border-navy/15">
             <button
               type="button"
               onClick={() => toggle(s.slug)}
@@ -35,7 +35,7 @@ export default function ServicesAccordion({ services }: { services: Service[] })
               ) : (
                 <ChevronDown className="shrink-0 text-navy/50" size={22} />
               )}
-              <span className="font-serif text-2xl text-navy sm:text-3xl">{s.title}</span>
+              <span className="font-serif font-light text-2xl text-navy sm:text-3xl">{s.title}</span>
             </button>
             <div
               className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
@@ -43,7 +43,7 @@ export default function ServicesAccordion({ services }: { services: Service[] })
               }`}
             >
               <div className="overflow-hidden">
-                <p className="max-w-2xl pb-6 text-lg leading-relaxed text-navy/80">{s.description}</p>
+                <p className="max-w-2xl pb-6 font-serif text-lg leading-relaxed text-navy/80">{s.description}</p>
                 <div className="flex flex-wrap items-center gap-x-6 gap-y-4 pb-8">
                   <Link
                     to={`/service/${s.slug}`}

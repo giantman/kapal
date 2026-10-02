@@ -49,7 +49,7 @@ export default function HeroVideoCarousel({
           <source src={src} type="video/mp4" />
         </video>
       ))}
-      <div className="absolute inset-0 bg-ink/55" />
+      <div className="absolute inset-0 bg-cream/55" />
     </div>
   );
 }
