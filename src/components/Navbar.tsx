@@ -161,9 +161,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 bg-transparent transition-transform duration-300 ease-out ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-transform duration-300 ease-out ${
+        light ? "bg-white" : "bg-cream"
+      } ${visible ? "translate-y-0" : "-translate-y-full"}`}
       style={light ? ({ "--color-navy": "var(--color-ink)" } as React.CSSProperties) : undefined}
     >
       <div className="flex h-28 w-full items-center justify-between gap-6 px-6 lg:px-10">
