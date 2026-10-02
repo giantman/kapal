@@ -1,5 +1,5 @@
 import markVincentKaplan from "../assets/attorneys/mark-vincent-kaplan.jpeg";
-import garryGekht from "../assets/attorneys/garry-gekht.jpeg";
+import garryGekht from "../assets/attorneys/garry-gekht.png";
 import melineKyurkchyan from "../assets/attorneys/meline-kyurkchyan.jpeg";
 import michelleTaran from "../assets/attorneys/michelle-taran.jpeg";
 import droritRaitor from "../assets/attorneys/drorit-raitor.jpg";
@@ -79,19 +79,19 @@ export const attorneys: Attorney[] = [
     group: "Founding Partners",
     photo: garryGekht,
     summary:
-      "A former forensic accountant and Certified Divorce Financial Analyst who has practiced family law since 1998, handling hundreds of cases involving complex financial analysis and asset valuation.",
+      "Garry M. Gekht is the managing partner of Kaplan Trope Gekht & DeCarolis and a former forensic accountant and Certified Divorce Financial Analyst, representing high-profile clients in complex family law matters since 1997.",
     sections: [
       {
         heading: "Education",
-        body: "Juris Doctorate from Loyola Law School, Los Angeles, where he received the Fritz Burns Scholar award for top-ranked first-year law student, along with Loyola Scholar status and Dean's Honor List recognition. Undergraduate degree from Chapman University College / Brandman University with a BBA in Accounting, graduating Magna Cum Laude.",
+        body: "Juris Doctor from Loyola Law School, Los Angeles, where he was the Fritz Burns Scholar, a Loyola Scholar, and a multiple-time Dean's List honoree. Bachelor of Business Administration in Accounting from Chapman University College, graduating Magna Cum Laude.",
       },
       {
         heading: "Professional Background",
-        body: "Before entering law practice, Gekht worked as a forensic accountant and Certified Divorce Financial Analyst (licensed 2009). He has practiced family law since 1998, handling hundreds of cases involving complex financial analysis, asset valuation, business distribution, spousal and child support calculations, and custody matters.",
+        body: "Mr. Gekht is the managing partner of KTGD and has worked at the firm and/or its predecessor and related firms since 1997. He has been licensed as a Certified Divorce Financial Analyst by the IDFA since 2009 and has been qualified as an expert in family law forensic accounting in Los Angeles Superior Court. He sits on the Executive Committee of the Southern California Family Law Inns of Court as Programming Chair and has presented on multiple California State Bar-approved continuing education panels for family law attorneys and judges.",
       },
       {
-        heading: "Recognition & Media",
-        body: "Guest, commentator, or author in various media outlets, including NPR's Take Two and the Los Angeles Business Journal. Received the City of Beverly Hills Mayor's Award for Excellence in Communication for his newspaper column work.",
+        heading: "Notable Work & Media",
+        body: "Mr. Gekht has represented many high-profile business people, athletes, entertainers, and behind-the-camera talent, with his cases featured extensively in People Magazine, US Weekly, E! Entertainment Television, the Los Angeles Times, the New York Post, Deadline, and Variety. He is also a sought-after commentator, having been interviewed and/or quoted in the Daily Journal, Page Six, KNX News Radio, NPR's Take Two, People, and US Weekly.",
       },
       {
         heading: "Legal Experience",
@@ -100,6 +100,10 @@ export const attorneys: Attorney[] = [
       {
         heading: "Community Involvement",
         body: "Served as two-term President of the LAGLCC Board of Directors, founded the Community Service Program for Beverly Hills Unified School District, and volunteered with the Harriet Buhai Center for Family Law.",
+      },
+      {
+        heading: "Selected Professional Accolades and Recognitions",
+        body: "Forbes: 10 Best Divorce Attorneys in Los Angeles (2024); Best Lawyers: Ones to Watch (2026); Doyle's Guide for Leading Family, Matrimonial & Divorce Lawyers: Recommended (2025); Super Lawyers Magazine: Rising Star, top 2.5% of all attorneys (2020–2027); Fritz Burns Scholar, Loyola Scholar, and Dean's List honoree, Loyola Law School; Magna Cum Laude, Chapman University College; Mayor's Award for Communications, City of Beverly Hills.",
       },
       {
         heading: "Languages",
@@ -261,7 +265,7 @@ export const attorneys: Attorney[] = [
     group: "Associates",
     photo: saraTavakoli,
     summary:
-      "Sara Tavakoli represents clients in sophisticated and high-conflict family law matters, bringing a meticulous, strategic, and responsive approach to her practice. She advises clients on a broad range of issues, including child and spousal support, complex property division, and motion practice, while providing thoughtful counsel, clear communication, and personalized attention at every stage of the legal process. Prior to entering private practice, Sara served as court-appointed counsel for parents in Los Angeles County dependency proceedings. In that role, she handled hundreds of contested hearings and trials, gaining substantial courtroom experience in high-stakes matters involving the Department of Children and Family Services.\n\nSara earned her Juris Doctor from Southwestern Law School and her Bachelor of Arts from the University of California, Berkeley, where she majored in Peace and Conflict Studies and minored in Spanish Literature.\n\nDuring law school, Sara competed on the Moot Court team, and worked with several public interest organizations, including Levitt & Quinn Family Law Center, Inner City Law Center, the Legal Aid Foundation of Los Angeles, Children’s Law Center of California, and the Lanterman Regional Center legal clinic. There, she advocated for children with developmental disabilities and specialized educational needs, reflecting a longstanding commitment to client advocacy that continues to shape her family law practice.",
+      "Sara Tavakoli represents clients in sophisticated and high-conflict family law matters, bringing a meticulous, strategic, and responsive approach to her practice. She advises clients on a broad range of issues, including child and spousal support, complex property division, and motion practice, while providing thoughtful counsel, clear communication, and personalized attention at every stage of the legal process. Prior to entering private practice, Sara served as court-appointed counsel for parents in Los Angeles County dependency proceedings. In that role, she handled hundreds of contested hearings and trials, gaining substantial courtroom experience in high-stakes matters involving the Department of Children and Family Services.\n\nSara earned her Juris Doctor from Southwestern Law School and her Bachelor of Arts from the University of California, Berkeley, where she majored in Peace and Conflict Studies and minored in Spanish Literature.\n\nDuring law school, Sara competed on the Moot Court team, and worked with several public interest organizations, including Levitt & Quinn Family Law Center, Inner City Law Center, the Legal Aid Foundation of Los Angeles, Children’s Law Center of California, and the Lanterman Regional Center legal clinic. There, she advocated for children with developmental disabilities and specialized educational needs, reflecting a longstanding commitment to client advocacy that continues to shape her family law practice.\n\nSara speaks Farsi.",
     sections: [],
   },
   {
