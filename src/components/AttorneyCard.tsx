@@ -21,13 +21,13 @@ export default function AttorneyCard({
       <Link
         to={`/${attorney.slug}`}
         className="relative block overflow-hidden rounded-[8px]"
-        style={{ aspectRatio: "279 / 294" }}
+        style={{ aspectRatio: "4 / 5" }}
       >
         {attorney.photo ? (
           <img
             src={attorney.photo}
             alt={attorney.name}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-ink/25 via-cream-dark to-ink/40">
@@ -38,7 +38,7 @@ export default function AttorneyCard({
         )}
       </Link>
 
-      <div className="pt-2.5 text-center">
+      <div className="pt-2.5 text-left">
         <Link to={`/${attorney.slug}`}>
           <p className="font-serif font-medium text-[clamp(0.6875rem,6cqw,1.125rem)] leading-snug text-navy group-hover:underline">
             {attorney.name}

@@ -79,37 +79,8 @@ export const attorneys: Attorney[] = [
     group: "Founding Partners",
     photo: garryGekht,
     summary:
-      "Garry M. Gekht is the managing partner of Kaplan Trope Gekht & DeCarolis and a former forensic accountant and Certified Divorce Financial Analyst, representing high-profile clients in complex family law matters since 1997.",
-    sections: [
-      {
-        heading: "Education",
-        body: "Juris Doctor from Loyola Law School, Los Angeles, where he was the Fritz Burns Scholar, a Loyola Scholar, and a multiple-time Dean's List honoree. Bachelor of Business Administration in Accounting from Chapman University College, graduating Magna Cum Laude.",
-      },
-      {
-        heading: "Professional Background",
-        body: "Mr. Gekht is the managing partner of KTGD and has worked at the firm and/or its predecessor and related firms since 1997. He has been licensed as a Certified Divorce Financial Analyst by the IDFA since 2009 and has been qualified as an expert in family law forensic accounting in Los Angeles Superior Court. He sits on the Executive Committee of the Southern California Family Law Inns of Court as Programming Chair and has presented on multiple California State Bar-approved continuing education panels for family law attorneys and judges.",
-      },
-      {
-        heading: "Notable Work & Media",
-        body: "Mr. Gekht has represented many high-profile business people, athletes, entertainers, and behind-the-camera talent, with his cases featured extensively in People Magazine, US Weekly, E! Entertainment Television, the Los Angeles Times, the New York Post, Deadline, and Variety. He is also a sought-after commentator, having been interviewed and/or quoted in the Daily Journal, Page Six, KNX News Radio, NPR's Take Two, People, and US Weekly.",
-      },
-      {
-        heading: "Legal Experience",
-        body: "Interned under the Honorable Judith Stein (Ret.) and former Mayor Richard Stone at Stone & Hiles law offices in Beverly Hills.",
-      },
-      {
-        heading: "Community Involvement",
-        body: "Served as two-term President of the LAGLCC Board of Directors, founded the Community Service Program for Beverly Hills Unified School District, and volunteered with the Harriet Buhai Center for Family Law.",
-      },
-      {
-        heading: "Selected Professional Accolades and Recognitions",
-        body: "Forbes: 10 Best Divorce Attorneys in Los Angeles (2024); Best Lawyers: Ones to Watch (2026); Doyle's Guide for Leading Family, Matrimonial & Divorce Lawyers: Recommended (2025); Super Lawyers Magazine: Rising Star, top 2.5% of all attorneys (2020–2027); Fritz Burns Scholar, Loyola Scholar, and Dean's List honoree, Loyola Law School; Magna Cum Laude, Chapman University College; Mayor's Award for Communications, City of Beverly Hills.",
-      },
-      {
-        heading: "Languages",
-        body: "Fluent in Russian; conversational Spanish.",
-      },
-    ],
+      "Garry M. Gekht is the managing partner of KTGD and has worked at KTGD and/or its predecessor/related firms since 1997. He graduated, Magna Cum Laude, from Chapman University College with a BBA in Business Administration: Accounting. He received his Juris Doctorate from Loyola Law School, Los Angeles, where he was the Fritz Burns Scholar, a Loyola Scholar and a multiple time Dean's List Honoree. He has been licensed as a Certified Divorce Financial Analyst by the IDFA since 2009. He has been qualified as an expert in family law forensic accounting in Los Angeles Superior Court.\n\nMr. Gekht sits on the Executive Committee of the Southern California Family Law Inns of Court as the Programming Chair. He has been a presenter on multiple family law Continuing Legal Education panels, which provide California State Bar approved continuing education to attorneys and judges.\n\nMr. Gekht has represented many high profile business people, athletes, entertainers and behind the camera talent. His cases have been featured extensively in the media, including People Magazine, US Weekly, E! Entertainment Television, the Los Angeles Times, the New York Post, Deadline and Variety. Mr. Gekht is also a sought after commentator and has been interviewed and/or quoted in various media outlets including the Daily Journal, Page Six, KNX News Radio, NPR's Take Two, People and US Weekly.\n\nMr. Gekht is fluent in Russian and conversational Spanish.\n\nSelected Professional Accolades and Recognitions:\n\nForbes: 10 Best Divorce Attorneys in Los Angeles (2024)\nBest Lawyers: Ones to Watch (2026)\nDoyles Guide for Leading Family, Matrimonial & Diroce Lawyers: Recommended (2025)\nSuperLawyers Magazine: Rising Star (Top 2.5% of all attorneys) (2020, 2021, 2022, 2023, 2024, 2025, 2026 and 2027)\nFritz Burns Scholar (Top Ranked Student)—Loyola Law School\nLoyola Scholar—Loyola Law School\nDean's List—Loyola Law School\nMagnu Cum Laude—Chapman University College\nMayor's Award for Communications—City of Beverly Hills",
+    sections: [],
   },
   {
     slug: "patrick-decarolis",
@@ -142,7 +113,7 @@ export const attorneys: Attorney[] = [
     slug: "drorit-raitor",
     name: "Drorit Bick Raiter, Esq.",
     title: "Partner",
-    group: "Founding Partners",
+    group: "Of Counsel",
     photo: droritRaitor,
     summary:
       "Nearly two decades of complex family law litigation experience and a pragmatic, client-focused approach to her practice.",
