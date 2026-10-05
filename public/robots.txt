@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://giantman.github.io/kapal/sitemap.xml
+Sitemap: https://ktgdllp.com/sitemap.xml

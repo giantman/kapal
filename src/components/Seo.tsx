@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const SITE_URL = "https://giantman.github.io/kapal";
+const SITE_URL = "https://ktgdllp.com";
 const SITE_NAME = "Kaplan Trope Gekht & DeCarolis";
 
 const setMetaTag = (attr: "name" | "property", key: string, content: string) => {
