@@ -2,7 +2,7 @@ import markVincentKaplan from "../assets/attorneys/mark-vincent-kaplan.jpeg";
 import garryGekht from "../assets/attorneys/garry-gekht.png";
 import melineKyurkchyan from "../assets/attorneys/meline-kyurkchyan.jpeg";
 import michelleTaran from "../assets/attorneys/michelle-taran.jpeg";
-import droritRaitor from "../assets/attorneys/drorit-raitor.jpg";
+import droritRaiter from "../assets/attorneys/drorit-raiter.jpg";
 import deborahTilton from "../assets/attorneys/deborah-tilton.jpg";
 import saraTavakoli from "../assets/attorneys/sara-tavakoli.png";
 import michaelTrope from "../assets/attorneys/michael-trope.jpg";
@@ -110,11 +110,11 @@ export const attorneys: Attorney[] = [
     ],
   },
   {
-    slug: "drorit-raitor",
+    slug: "drorit-raiter",
     name: "Drorit Bick Raiter, Esq.",
     title: "Partner",
     group: "Of Counsel",
-    photo: droritRaitor,
+    photo: droritRaiter,
     summary:
       "Nearly two decades of complex family law litigation experience and a pragmatic, client-focused approach to her practice.",
     sections: [
