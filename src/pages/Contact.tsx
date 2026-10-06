@@ -7,7 +7,7 @@ import Seo from "../components/Seo";
 const fieldCls =
   "w-full border-0 border-b border-navy/25 bg-transparent px-0 py-2 text-navy placeholder-navy/40 outline-none focus:border-navy";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/e2d5e8b6f2a949eef545d70aa2a6ee5c";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/drorit@ktgdllp.com";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -60,6 +60,7 @@ export default function Contact() {
         <form onSubmit={handleSubmit} className="mx-auto mt-14 max-w-xl space-y-8">
           <input type="hidden" name="_subject" value="New consultation request" />
           <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_cc" value="garry@ktgdllp.com" />
 
           <div className="grid gap-8 sm:grid-cols-2">
             <input
