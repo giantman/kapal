@@ -60,7 +60,7 @@ export default function Contact() {
         <form onSubmit={handleSubmit} className="mx-auto mt-14 max-w-xl space-y-8">
           <input type="hidden" name="_subject" value="New consultation request" />
           <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_cc" value="garry@ktgdllp.com" />
+          <input type="hidden" name="_cc" value="garry@ktgdllp.com,janice@ktgdllp.com" />
 
           <div className="grid gap-8 sm:grid-cols-2">
             <input
