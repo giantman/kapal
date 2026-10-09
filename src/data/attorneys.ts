@@ -89,25 +89,10 @@ export const attorneys: Attorney[] = [
     group: "Founding Partners",
     photo: patrickDecarolis,
     summary:
+      "Mr. DeCarolis was admitted to practice law in the State of California in 1978 and has been a Family Law Specialist certified by the State Bar since 1984.\n\nHe has handled thousands of family law cases including in excess of 1,500 Orders to Show Cause/Requests for Orders and in excess of 150 contested trials. In addition to regularly attending continuing education programs, he attends a family law study group monthly, which group is composed of other experienced family law practitioners.\n\nMr. DeCarolis is a Fellow of the American Academy of Matrimonial Lawyers and a Fellow of the International Academy of Matrimonial Lawyers. He has been peer reviewed as an AV rated attorney with Martindale-Hubbell, has been selected to the Southern California Super Lawyers list and is recognized by Best Lawyers in America®, a peer-reviewed organization.\n\nMr. DeCarolis is a member of the Los Angeles County Bar Association, including its Family Law Section. Since 1988, he has been a member of the Los Angeles County Bar Association Family Law Section Executive Committee (presently ex officio). He was the Chair of the Family Law Section for the fiscal year 1997-1998 and was an officer of the Section the preceding three years. He has chaired the subcommittee which produced the annual Child Custody Colloquium and the annual Family Law Symposium. He has also chaired the Alternate Dispute Resolution Subcommittee for four years (1990-1994) which committee organized and administered the Court Mediator Program in the Central District. Since 1983, he has served as a mediator for family law matters at the Central District Courthouse. He has acted as a Judge Pro Tem and a settlement officer for family law matters in Department E at the Superior Court in Santa Monica and as a Judge Pro Tem for family law matters in Department K in Van Nuys.\n\nHe was on the Board of Editorial Consultants of Matthew Bender & Company, Inc. for its Family Law Monthly publication for several years. He has lectured at the American Academy of Matrimonial Lawyers Trial Advocacy Institute. In 2020, he was the co-dean of the Institute. Mr. DeCarolis has lectured for The Rutter Group at its Basic Family Law Program and has been a contributor to their Family Law Practice Guide and to the CEB’s “Action Guide” for Marital Dissolutions. He has presented numerous times at the Los Angeles County Bar Association/Los Angeles Superior Court Annual Family Law Symposium and other of its continuing education programs and in 1996, he chaired this Symposium. He has been a contributor to the Beverly Hills Bar Association Family Law Symposium by writing articles in their annual symposium syllabi.",
+    seoDescription:
       "A certified family law specialist who has been practicing law for more than 40 years.",
-    sections: [
-      {
-        heading: "Professional Experience",
-        body: "Early in his career, DeCarolis was associated with Manley Freid and Paul Caruso before opening his own family law practice in 1982. In 1997, he was a founding partner in DeCarolis & Trope, which merged in 2001 with Trope and Trope, becoming Trope & DeCarolis in 2007.",
-      },
-      {
-        heading: "Judicial & Mediation Service",
-        body: "DeCarolis has served as a Judge pro tem in the Los Angeles Superior Court in Santa Monica and Van Nuys, and as a member of the Mediation Panel for the Family Law departments in the Central and West districts.",
-      },
-      {
-        heading: "Notable Cases",
-        body: "He was trial and appellate counsel in the international move-away case Condon v. Cooper.",
-      },
-      {
-        heading: "Publications",
-        body: "DeCarolis is an editorial consultant for Matthew Bender and has contributed to the Rutter Group in its family law publication.",
-      },
-    ],
+    sections: [],
   },
   {
     slug: "drorit-raiter",
